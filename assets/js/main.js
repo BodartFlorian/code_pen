@@ -9,10 +9,12 @@ const cssProgressBar = document.querySelector('#cssProgressBar');
 const jsProgressBar = document.querySelector('#jsProgressBar');
 const codeLive = document.querySelector('#codeLive');
 const htmlHidden = document.querySelector('#htmlHidden');
+// calcul 
 const maxlength = 400;
 const halfProgressBar = (maxlength / 2);
 const splitProgressBar = (maxlength / 100);
 const almostFullProgressBar = (splitProgressBar * 80);
+// animation loader
 const loader = document.querySelector('#loader');
 const containerCircle = document.querySelector('#containerCircle');
 const cercle1 = document.querySelector('#cercle1');
@@ -20,12 +22,12 @@ const cercle2 = document.querySelector('#cercle2');
 
 
 
- // function textarea maxlength
- function MaxLengthTextarea(objettextarea){
-  if (objettextarea.value.length > maxlength) {
+// function textarea maxlength
+function MaxLengthTextarea(objettextarea){
+    if (objettextarea.value.length > maxlength) {
     objettextarea.value = objettextarea.value.substring(0, maxlength);
     alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
-   }
+    }    
    
    // change value progress bar html
     htmlProgressBar.style.width = ((htmlHidden.value.length / splitProgressBar) + "%");
@@ -43,7 +45,7 @@ const cercle2 = document.querySelector('#cercle2');
     // change value progress bar css
     cssProgressBar.style.width = ((cssTextArea.value.length / splitProgressBar) + "%");
 
-       // change style progress bar css
+    // change style progress bar css
     if (cssTextArea.value.length < halfProgressBar){
     // change style 
     cssProgressBar.style.background = "green";
@@ -53,10 +55,10 @@ const cercle2 = document.querySelector('#cercle2');
     cssProgressBar.style.background = "red";
     }
 
-         // change value progress bar js
+    // change value progress bar js
     jsProgressBar.style.width = ((jsTextArea.value.length / splitProgressBar) + "%");
 
-       // change style progress bar js
+    // change style progress bar js
     if (jsTextArea.value.length < halfProgressBar){
     // change style 
     jsProgressBar.style.background = "green";
@@ -91,8 +93,6 @@ function live(){
     
     codeLive.contentWindow.document.open();
     codeLive.contentWindow.document.write(writeHtmlTextArea + writeCssTextArea + writeJsTextArea);
-    console.log(writeHtmlTextArea);
-    console.log(writeJsTextArea);
     codeLive.contentWindow.document.close();
 }
 
