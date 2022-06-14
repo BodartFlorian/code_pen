@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.htmlBlock, .cssBlock, .jsBlock{
+    width: 30%;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    text-align: center;
+    font-size: large;
+}
+.htmlProgressBar, .cssProgressBar, .jsProgressBar{
+    width: 100%;
+    height: 5px;
+    margin-bottom: 3px;
+}
+.html,.css,.js{
+height: 100%;
+width: 100%;
+}
+textarea {
+    resize: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.htmlHidden,
+.htmlHidden textarea {
+    display: none;
+}
+.codeArea{  
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50vh;
+}
+.codeLive{
+    border: none;
+    color: white;
+    background-color: white;
+    width: 100%;
+    height: 45vh;
+    margin: 20px 20px 0 20px;
+}
+.loader{
+    position: absolute;
+    right: 35px;
+    top: 55%;
+   
+}
+.loader, .containerCircle, .cercle1, .cercle2{
+    display: none;
+}
+.baliseDiv{
+    position: relative;
+    width: 100%;
+}
+select{
+    position: absolute;
+    right: 0px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+.containerCircle {
+    display: flex;
+    position: fixed;
+    justify-content: right;
+    position: relative;
+}
+
+.containerCircle .cercle1 {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #f03a0d;
+    border-right: 10px solid #f03a0d;
+    border-left: 10px solid #f03a0d;
+    transform: rotate(45deg);
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.containerCircle .cercle1 .cercle2 {
+    position: relative;
+    margin: 7.5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #f0820d;
+    border-right: 5px solid #f0820d;
+    border-left: 5px solid #f0820d;
+    transform: rotate(90deg);
+    animation: animateCercle2 4s ease-in-out infinite;
+}
+
+@keyframes animateCercle2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-450deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.containerCircle .cercle1 .cercle2::before {
+    content: '';
+    position: absolute;
+    bottom: 22%;
+    right: 22%;
+    width: 20px;
+    height: 20px;
+    background: rgb(207, 137, 17);
+    border-radius: 50%;
+}
