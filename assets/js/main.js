@@ -19,6 +19,11 @@ const loader = document.querySelector('#loader');
 const containerCircle = document.querySelector('#containerCircle');
 const cercle1 = document.querySelector('#cercle1');
 const cercle2 = document.querySelector('#cercle2');
+// balise html
+const balisesHtml = document.querySelector('#balisesHtml');
+// balise css
+const balisesCss = document.querySelector('#balisesCss');
+
 
 
 
@@ -26,7 +31,7 @@ const cercle2 = document.querySelector('#cercle2');
 function MaxLengthTextarea(objettextarea){
     if (objettextarea.value.length > maxlength) {
     objettextarea.value = objettextarea.value.substring(0, maxlength);
-    alert('Votre texte ne doit pas dépasser '+maxlength+' caractères!');
+    alert('Votre texte ne doit pas dépasser '+ maxlength +' caractères!');
     }    
    
    // change value progress bar html
@@ -144,3 +149,55 @@ jsTextArea.addEventListener('mouseout', function(){
     cercle1.style.display ="";
     cercle2.style.display ="";
 });
+
+
+// balises html 
+balisesHtml.addEventListener('change', (event) => {
+    if (event.target.value == 1){
+        htmlTextArea.value += "<h1></h1>";
+    } 
+    if (event.target.value == 2){
+        htmlTextArea.value += "<div></div>";
+    } 
+    if (event.target.value == 3){
+        htmlTextArea.value += "<p></p>";
+    } 
+    if (event.target.value == 4){
+        htmlTextArea.value += '<a href=""></a>';
+    } 
+    if (event.target.value == 5){
+        htmlTextArea.value += "<br>";
+    } 
+    if (event.target.value == 6){
+        htmlTextArea.value += "<button></button>";
+    } 
+    if (event.target.value == 7){
+        htmlTextArea.value += '<img src="" atl= ""></img>';
+    }  
+});
+
+// balises css
+balisesCss.addEventListener('change', (event) => {
+    if (event.target.value == 1){
+        cssTextArea.value += "color: red;";
+    } 
+    if (event.target.value == 2){
+        cssTextArea.value += "color: blue;";
+    } 
+    if (event.target.value == 3){
+        cssTextArea.value += "color: green;";
+    } 
+    if (event.target.value == 4){
+        cssTextArea.value += "color: pink;";
+    } 
+    if (event.target.value == 5){
+        cssTextArea.value += "color: black;";
+    } 
+    if (event.target.value == 6){
+        cssTextArea.value += "color: yellow;";
+    } 
+    if (event.target.value == 7){
+        cssTextArea.value += "color: orange;";
+    }  
+});
+

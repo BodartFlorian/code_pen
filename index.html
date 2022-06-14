@@ -12,16 +12,18 @@
         <div class="htmlBlock">
             <p class="title">HTML</p>
             <div class="baliseDiv">
-                <select name="pets" id="addBalise" class="addBalise">
-                    <option value="0" class="balises" onclick="">balises</option>
-                    <option value="1" class="h1" onclick="">h1</option>
-                    <option value="2" class="div" onclick="">div</option>
-                    <option value="3" class="p" onclick="">p</option>
-                    <option value="4" class="br" onclick="">br</option>
-                    <option value="5" class="button">button</option>
+                <select name="balisesHtml" id="balisesHtml">
+                    <option>balises</option>
+                    <option value="1" class="h1Balise" id="h1Balise">h1</option>
+                    <option value="2" class="divBalise" id="divBalise">div</option>
+                    <option value="3" class="pBalise" id="pBalise">p</option>
+                    <option value="4" class="aBalise" id="aBalise">a</option>
+                    <option value="5" class="brBalise" id="brBalise">br</option>
+                    <option value="6" class="buttonBalise" id="buttonBalise">button</option>
+                    <option value="7" class="imgBalise" id="imgBalise">img</option>
                 </select>
             </div>
-            <div id="htmlCounter">0 / 200</div>
+            <div id="htmlCounter">  /  </div>
             <div class="htmlProgressBar" id="htmlProgressBar"></div>
             <div class="html">
                 <textarea id="htmlText" name="htmlText" oninput="MaxLengthTextarea(this);"
@@ -31,7 +33,19 @@
         </div>
         <div class="cssBlock">
             <p class="title">CSS</p>
-            <div id="cssCounter">0 / 200</div>
+            <div class="baliseDiv">
+                <select name="balisesCss" id="balisesCss">
+                    <option>colors</option>
+                    <option value="1" class="redBalise" id="redBalise">red</option>
+                    <option value="2" class="blueBalise" id="blueBalise">blue</option>
+                    <option value="3" class="greenBalise" id="greenBalise">green</option>
+                    <option value="4" class="pinkBalise" id="pinkBalise">pink</option>
+                    <option value="5" class="blackBalise" id="blackBalise">black</option>
+                    <option value="6" class="yellowBalise" id="yellowBalise">yellow</option>
+                    <option value="7" class="orangeBalise" id="orangeBalise">orange</option>
+                </select>
+            </div>
+            <div id="cssCounter">  /  </div>
             <div class="cssProgressBar" id="cssProgressBar"></div>
             <div class="css">
                 <textarea id="cssText" name="cssText" oninput="MaxLengthTextarea(this);"
@@ -40,7 +54,7 @@
         </div>
         <div class="jsBlock">
             <p class="title">JS</p>
-            <div id="jsCounter">0 / 200</div>
+            <div id="jsCounter">  /  </div>
             <div class="jsProgressBar" id="jsProgressBar"></div>
             <div class="js">
                 <textarea id="jsText" name="jsText" oninput="MaxLengthTextarea(this);"

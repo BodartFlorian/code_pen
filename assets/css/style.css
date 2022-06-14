@@ -57,6 +57,8 @@ textarea {
     height: 45vh;
     margin: 20px 20px 0 20px;
 }
+
+/* loader and animation */
 .loader{
     position: absolute;
     right: 35px;
@@ -66,30 +68,12 @@ textarea {
 .loader, .containerCircle, .cercle1, .cercle2{
     display: none;
 }
-.baliseDiv{
-    position: relative;
-    width: 100%;
-}
-select{
-    position: absolute;
-    right: 0px;
-    background-color: black;
-    color: white;
-    border-radius: 3px;
-}
-
-
-
-
-
-
 .containerCircle {
     display: flex;
     position: fixed;
     justify-content: right;
     position: relative;
 }
-
 .containerCircle .cercle1 {
     position: relative;
     width: 80px;
@@ -102,7 +86,6 @@ select{
     transform: rotate(135deg);
     animation: animate 4s ease-in-out infinite;
 }
-
 @keyframes animate {
     0% {
         transform: rotate(0deg);
@@ -116,7 +99,6 @@ select{
         transform: rotate(0deg);
     }
 }
-
 .containerCircle .cercle1 .cercle2 {
     position: relative;
     margin: 7.5px;
@@ -130,7 +112,6 @@ select{
     transform: rotate(135deg);
     animation: animateCercle2 4s ease-in-out infinite;
 }
-
 @keyframes animateCercle2 {
     0% {
         transform: rotate(0deg);
@@ -144,7 +125,6 @@ select{
         transform: rotate(0deg);
     }
 }
-
 .containerCircle .cercle1 .cercle2::before {
     content: '';
     position: absolute;
@@ -154,4 +134,17 @@ select{
     height: 20px;
     background: rgb(207, 137, 17);
     border-radius: 50%;
+}
+
+/* balise buttons */
+.baliseDiv {
+    position: relative;
+    width: 100%;
+}
+select {
+    position: absolute;
+    right: 0px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
 }
