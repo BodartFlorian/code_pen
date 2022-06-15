@@ -13,7 +13,7 @@
             <p class="title">HTML</p>
             <div class="baliseDiv">
                 <select name="balisesHtml" id="balisesHtml">
-                    <option>balises</option>
+                    <option value="0">balises</option>
                     <option value="1" class="h1Balise" id="h1Balise">h1</option>
                     <option value="2" class="divBalise" id="divBalise">div</option>
                     <option value="3" class="pBalise" id="pBalise">p</option>
@@ -35,7 +35,7 @@
             <p class="title">CSS</p>
             <div class="baliseDiv">
                 <select name="balisesCss" id="balisesCss">
-                    <option>colors</option>
+                    <option  value="0">colors</option>
                     <option value="1" class="redBalise" id="redBalise">red</option>
                     <option value="2" class="blueBalise" id="blueBalise">blue</option>
                     <option value="3" class="greenBalise" id="greenBalise">green</option>
@@ -43,6 +43,16 @@
                     <option value="5" class="blackBalise" id="blackBalise">black</option>
                     <option value="6" class="yellowBalise" id="yellowBalise">yellow</option>
                     <option value="7" class="orangeBalise" id="orangeBalise">orange</option>
+                </select>
+                <select name="balisesCssOther" id="balisesCssOther">
+                    <option  value="0">other</option>
+                    <option value="1" class="fontSize" id="fontSize">font-size</option>
+                    <option value="2" class="bcgClr" id="bcgClr">bcg-clr</option>
+                    <option value="3" class="position" id="position">position</option>
+                    <option value="4" class="width" id="width">width</option>
+                    <option value="5" class="height" id="height">height</option>
+                    <option value="6" class="margin" id="margin">margin</option>
+                    <option value="7" class="padding" id="padding">padding</option>
                 </select>
             </div>
             <div id="cssCounter">  /  </div>
@@ -54,6 +64,15 @@
         </div>
         <div class="jsBlock">
             <p class="title">JS</p>
+            <div class="baliseDiv">
+                <select name="balisesJs" id="balisesJs">
+                    <option value="0">balises</option>
+                    <option value="1" class="function" id="function">function</option>
+                    <option value="2" class="querySelector" id="querySelector">querySelector</option>
+                    <option value="3" class="eventListener" id="eventListener">eventListener</option>
+                    <option value="4" class="ifElse" id="ifElse">if else</option>
+                </select>
+            </div>
             <div id="jsCounter">  /  </div>
             <div class="jsProgressBar" id="jsProgressBar"></div>
             <div class="js">

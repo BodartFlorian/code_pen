@@ -21,10 +21,11 @@ const cercle1 = document.querySelector('#cercle1');
 const cercle2 = document.querySelector('#cercle2');
 // balise html
 const balisesHtml = document.querySelector('#balisesHtml');
-// balise css
+// balises css
 const balisesCss = document.querySelector('#balisesCss');
-
-
+const balisesCssOther = document.querySelector('#balisesCssOther');
+// balises js
+const balisesJs = document.querySelector('#balisesJs');
 
 
 // function textarea maxlength
@@ -174,9 +175,10 @@ balisesHtml.addEventListener('change', (event) => {
     if (event.target.value == 7){
         htmlTextArea.value += '<img src="" atl= ""></img>';
     }  
+    return event.target.value = 0;
 });
 
-// balises css
+// balises css colors
 balisesCss.addEventListener('change', (event) => {
     if (event.target.value == 1){
         cssTextArea.value += "color: red;";
@@ -198,6 +200,49 @@ balisesCss.addEventListener('change', (event) => {
     } 
     if (event.target.value == 7){
         cssTextArea.value += "color: orange;";
-    }  
+    }
+    return event.target.value = 0;
+});
+// balises css other
+balisesCssOther.addEventListener('change', (event) => {
+    if (event.target.value == 1){
+        cssTextArea.value += "font-size: ;";
+    } 
+    if (event.target.value == 2){
+        cssTextArea.value += "backgroung-color: ;";
+    } 
+    if (event.target.value == 3){
+        cssTextArea.value += "position: ;";
+    } 
+    if (event.target.value == 4){
+        cssTextArea.value += "width: ;";
+    } 
+    if (event.target.value == 5){
+        cssTextArea.value += "height: ;";
+    } 
+    if (event.target.value == 6){
+        cssTextArea.value += "margin: 0px, 0px, 0px, 0px;";
+    } 
+    if (event.target.value == 7){
+        cssTextArea.value += "padding: 0px, 0px, 0px, 0px;";
+    }
+    return event.target.value = 0;
+});
+
+// balises js
+balisesJs.addEventListener('change', (event) => {
+    if (event.target.value == 1){
+       jsTextArea.value += "function(){}";
+    } 
+    if (event.target.value == 2){
+       jsTextArea.value += "document.querySelector('target')";
+    } 
+    if (event.target.value == 3){
+       jsTextArea.value += "document.querySelector('target').addEventListener('type', function(){   //function Here   });";
+    } 
+    if (event.target.value == 4){
+       jsTextArea.value += "if(){  //if here  } else {  //else here}";
+    }
+    return event.target.value = 0;
 });
 

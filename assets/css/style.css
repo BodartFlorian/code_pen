@@ -140,11 +140,16 @@ textarea {
 .baliseDiv {
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 select {
-    position: absolute;
     right: 0px;
     background-color: black;
     color: white;
     border-radius: 3px;
+    margin-left: 10px;
+    bcg
 }
+
+
